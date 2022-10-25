@@ -1,0 +1,107 @@
+{
+  "id": "8b3e8d10-04d7-445b-a0ef-f5fdc8f32b42",
+  "version": "2.0",
+  "name": "Calculadora de Descontos",
+  "url": "https://calculadora.diegoquirino.net/",
+  "tests": [{
+    "id": "19cbcfc7-9bf3-4fcb-b59a-cb90bdc38605",
+    "name": "QACD-29 : Calcular desconto do produto com cliente do Tipo \"A\" e quantidade igual a 1",
+    "commands": [{
+      "id": "4a27293e-0e03-45bd-a0dc-0df775cf9ca6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "071280af-a6eb-4f05-a425-033c9114df05",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2831569c-b1f1-4ae5-ad65-4977510fa4c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=a.nav-link[href='/produtos']",
+      "targets": [
+        ["linkText=Calcular Desconto", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Calcular Desconto')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/produtos')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Calcular Desconto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e5a098b-af08-41e2-9576-c471d8662eb3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/itens/add/produto/2')]",
+      "targets": [
+        ["css=tr:nth-child(2) .btn-primary", "css:finder"],
+        ["xpath=(//a[contains(text(),'$')])[2]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/itens/add/produto/2')]", "xpath:href"],
+        ["xpath=//tr[2]/td[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f0e2103-9fbf-458a-b7ce-c5f7a8b6d91b",
+      "comment": "",
+      "command": "select",
+      "target": "id=tipoCliente",
+      "targets": [],
+      "value": "A"
+    }, {
+      "id": "4bd18de1-c47f-486f-9a50-9b75a05d479e",
+      "comment": "",
+      "command": "type",
+      "target": "id=quantidade",
+      "targets": [
+        ["id=quantidade", "id"],
+        ["name=quantidade", "name"],
+        ["css=#quantidade", "css:finder"],
+        ["xpath=//input[@id='quantidade']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "cc2a23db-0177-48bd-a46d-7beae7799e13",
+      "comment": "",
+      "command": "click",
+      "target": "css=button[type=\"submit\"]",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Calcular Desconto!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "51672cab-e1f6-43e3-8630-1240e3c7ee0f",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=fator",
+      "targets": [
+        ["id=fator", "id"],
+        ["css=#fator", "css:finder"],
+        ["xpath=//input[@id='fator']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "0,90 (ou seja, 10% de desconto)"
+    }]
+  }],
+  "suites": [{
+    "id": "5ee3b3e0-7a6c-4fc7-ab35-b8464ec1971e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["19cbcfc7-9bf3-4fcb-b59a-cb90bdc38605"]
+  }],
+  "urls": ["https://calculadora.diegoquirino.net/"],
+  "plugins": []
+}
