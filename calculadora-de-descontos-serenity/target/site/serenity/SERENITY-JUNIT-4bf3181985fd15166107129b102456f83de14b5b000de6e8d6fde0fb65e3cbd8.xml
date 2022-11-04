@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="2" name="REQ003 - Enviar mensagem de contato" skipped="0" tests="4" time="26.16" timestamp="2022-11-04 12:45:18"><testcase name="Envio de mensagem válida"/><testcase name="Cálculo do Desconto do Produto Inválido"><failure message="&#10;Expected: is &quot;Sua mensagem não pôde ser enviada no momento! Tente mais tarde.&quot;&#10;     but: was &quot;Mensagem de SUGESTÃO por usuário de idade MENOR QUE 18 ANOS foi enviada com sucesso!&quot;" type="java.lang.AssertionError">
-Expected: is "Sua mensagem não pôde ser enviada no momento! Tente mais tarde."
-     but: was "Mensagem de SUGESTÃO por usuário de idade MENOR QUE 18 ANOS foi enviada com sucesso!"</failure><system-err>
-Expected: is "Sua mensagem não pôde ser enviada no momento! Tente mais tarde."
-     but: was "Mensagem de SUGESTÃO por usuário de idade MENOR QUE 18 ANOS foi enviada com sucesso!"
-net.diegoquirino.calculator.ux.req003.ContactSteps.verifyResponseMessage(ContactSteps.java:25)
-net.diegoquirino.calculator.ux.req003.ContactGWT.o_sistema_apresenta_uma_mensagem_de_envio_invalido(ContactGWT.java:36)
-✽.o sistema apresenta uma mensagem de envio inválido(file:///home/kaneda/calculadora-de-descontos-serenity/src/test/resources/features/REQ003-EnviarMensagemDeContato.feature:41)
-</system-err></testcase></testsuite>

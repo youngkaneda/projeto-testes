@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"REQ003 - Enviar mensagem de contato","Envio de mensagem válida","SUCCESS","2022-11-04T00:45:18.479346783-03:00[America/Fortaleza]","0.0","21.21"
-"REQ003 - Enviar mensagem de contato","Cálculo do Desconto do Produto Inválido","FAILURE","2022-11-04T00:45:39.700756885-03:00[America/Fortaleza]","0.0","4.95"
