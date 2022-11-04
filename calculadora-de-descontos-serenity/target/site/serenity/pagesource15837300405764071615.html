@@ -1,0 +1,69 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="UTF-8"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width"&gt; <br/>
+  &lt;title&gt;Calculadora de Descontos&lt;/title&gt; <br/>
+  &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"&gt; <br/>
+  &lt;link rel="stylesheet" href="/css/calculadora.css"&gt; <br/>
+ &lt;/head&gt; <br/>
+ &lt;body&gt; <br/>
+  &lt;header&gt; <br/>
+   &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt; &lt;a class="navbar-brand" href="#"&gt;Calculadora de Descontos&lt;/a&gt; &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt; &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt; &lt;/button&gt; <br/>
+    &lt;div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent"&gt; <br/>
+     &lt;ul class="navbar-nav justify-content-end"&gt; <br/>
+      &lt;li class="nav-item"&gt; &lt;a class="nav-link" href="/"&gt;Página Inicial&lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;li class="nav-item"&gt; &lt;a class="nav-link" href="/produtos"&gt;Calcular Desconto&lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;li class="nav-item"&gt; &lt;a class="nav-link" href="/ajuda"&gt;Ajuda (FAQ)&lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;li class="nav-item active"&gt; &lt;a class="nav-link" href="/contato"&gt;Contato&lt;/a&gt; &lt;/li&gt; <br/>
+     &lt;/ul&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/nav&gt; <br/>
+  &lt;/header&gt; <br/>
+  &lt;section class="container"&gt; <br/>
+   &lt;div class="jumbotron"&gt; <br/>
+    &lt;h1 class="display-4"&gt;Calculadora de Descontos&lt;/h1&gt; <br/>
+    &lt;p class="lead"&gt;Simule seus descontos para os seus produtos de acordo com o perfil de cliente e a quantidade de itens que serão comprados!&lt;/p&gt; &lt;!--<br/>
+        &lt;hr class="my-4"&gt;<br/>
+        &lt;p&gt;Nunca acessou o sistema, está perdido, leia a nossa seção de Ajuda (FAQ)&lt;/p&gt;<br/>
+        &lt;a class="btn btn-primary btn-lg" href="#" role="button"&gt;Ajuda (FAQ)&lt;/a&gt;<br/>
+        --&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;div class="alert alert-dismissable alert-success"&gt; &lt;!--th:assert="${!#strings.isEmpty(type) and !#strings.isEmpty(message)}"--&gt; &lt;button type="button" class="close" data-dismiss="alert" aria-hidden="true"&gt;×&lt;/button&gt; &lt;span&gt;Mensagem de SUGESTÃO por usuário de idade MENOR QUE 18 ANOS foi enviada com sucesso!&lt;/span&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;h1&gt;Contato&lt;/h1&gt; <br/>
+   &lt;h4&gt;&lt;small&gt;Preencha as informações abaixo, e deixe-nos saber quais são as suas dúvidas!&lt;/small&gt;&lt;/h4&gt; <br/>
+   &lt;div class="card mt-4 mb-4"&gt; <br/>
+    &lt;div class="card-body"&gt; <br/>
+     &lt;form method="post" action="/contato"&gt; <br/>
+      &lt;div class="form-group"&gt; &lt;label class="font-weight-bold" for="nome"&gt;Nome:&lt;/label&gt; <br/>
+       &lt;input class="form-control" type="text" id="nome" name="nome" value=""&gt; &lt;small class="form-text text-muted"&gt;Informe o seu nome completo.&lt;/small&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="form-group"&gt; &lt;label class="font-weight-bold" for="email"&gt;Email:&lt;/label&gt; <br/>
+       &lt;input class="form-control" type="email" id="email" name="email" value="juan@gmail.com"&gt; &lt;small class="form-text text-muted"&gt;Nós nunca compartilhamos o seu email com ninguém.&lt;/small&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="form-group"&gt; &lt;label class="mr-3"&gt;Tipo de Mensagem: &lt;/label&gt; <br/>
+       &lt;div class="form-check form-check-inline"&gt; <br/>
+        &lt;input class="form-check-input" type="radio" name="tipo" id="tipo_duvida" value="Dúvida"&gt; &lt;label class="form-check-label" for="tipo_duvida"&gt;Dúvida&lt;/label&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;div class="form-check form-check-inline"&gt; <br/>
+        &lt;input class="form-check-input" type="radio" name="tipo" id="tipo_sugestao" value="Sugestão" checked&gt; &lt;label class="form-check-label" for="tipo_sugestao"&gt;Sugestão&lt;/label&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;div class="form-check form-check-inline"&gt; <br/>
+        &lt;input class="form-check-input" type="radio" name="tipo" id="tipo_reclamacao" value="Reclamação"&gt; &lt;label class="form-check-label" for="tipo_reclamacao"&gt;Reclamação&lt;/label&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="form-group"&gt; &lt;label class="font-weight-bold" for="idade"&gt;Idade:&lt;/label&gt; &lt;select class="form-control" id="idade" name="idade"&gt; &lt;option value="Menor que 18 anos" selected&gt;Menor que 18 anos&lt;/option&gt; &lt;option value="Entre 18 e 29 anos"&gt;Entre 18 e 29 anos&lt;/option&gt; &lt;option value="Entre 30 e 64 anos"&gt;Entre 30 e 64 anos&lt;/option&gt; &lt;option value="A partir de 65 anos"&gt;A partir de 65 anos&lt;/option&gt; &lt;/select&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="form-group"&gt; &lt;label class="font-weight-bold" for="mensagem"&gt;Escreva aqui sua mensagem&lt;/label&gt; &lt;textarea class="form-control" name="mensagem" id="mensagem" cols="30" rows="10"&gt;&lt;/textarea&gt; &lt;small class="form-text text-muted"&gt;Sua mensagem deve ter no máximo 1000 caracteres.&lt;/small&gt; <br/>
+      &lt;/div&gt; &lt;button type="submit" class="btn btn-primary"&gt;Enviar sua mensagem&lt;/button&gt; &lt;button type="reset" class="btn btn-warning"&gt;Limpar&lt;/button&gt; &lt;a type="button" class="btn btn-secondary" href="/"&gt;Cancelar&lt;/a&gt; <br/>
+     &lt;/form&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/section&gt; <br/>
+  &lt;footer&gt; &lt;small class="text-muted"&gt;© 2020 Calculadora de Descontos&lt;/small&gt; <br/>
+  &lt;/footer&gt; <br/>
+  &lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"&gt;&lt;/script&gt; <br/>
+  &lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"&gt;&lt;/script&gt; <br/>
+  &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"&gt;&lt;/script&gt; <br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
